@@ -1,3 +1,7 @@
+const appInsights = require("applicationinsights");
+appInsights.setup("ae7f28a2-35a2-4524-87ca-42fbae7417d9");
+appInsights.start();
+
 angular.module('app', []);
 
 angular
