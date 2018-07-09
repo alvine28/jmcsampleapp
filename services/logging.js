@@ -1,5 +1,5 @@
 const appInsights = require("applicationinsights");
-const serverConfig = require("../server.js");
+const serverConfig = require("../server");
 
 let enabled = true;
 try {

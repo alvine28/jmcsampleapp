@@ -81,8 +81,3 @@ MongoClient.connect(process.env.MONGODB_URI || url,function(err, db){
         console.log('Express server listening on port %s.', port);
     })
 })
-
-
-module.exports = {
-    applicationInsightsInstrumentationKey: process.env.appInsightsKey
-};
