@@ -1,3 +1,6 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+
 version: '3'
 services:
   jmcsample-app:
@@ -6,6 +9,3 @@ services:
     container_name: jmcsample-app
     ports:
         - "1338:1338"
-
-apiVersion: extensions/v1beta1
-kind: Deployment
