@@ -16,3 +16,13 @@ spec:
         - containerPort: 1338
       imagePullSecrets:
       - name: acr-auth
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: jmcsample-app-front
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: jmcsample-app
