@@ -1,11 +1,17 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
-
-version: '3'
-services:
-  jmcsample-app:
-    build: .
-    image: alvinejmc.azurecr.io/alvine28/jmcsampleapp-compose:latest
-    container_name: jmcsample-app
-    ports:
-        - "1338:1338"
+metadata:
+  name: jmcsample-app
+  labels:
+    app: jmcsample-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jmcsample-app
+    spec:
+      containers:
+      - name: jmcsample-app
+        image: alvinejmc.azurecr.io/alvine28/jmcsampleapp-compose:latest
+        ports:
+        - containerPort: 1338
