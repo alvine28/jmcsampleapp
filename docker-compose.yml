@@ -10,6 +10,6 @@ spec:
     spec:
       containers:
       - name: jmcsample-app
-        image: alvinejmc.azurecr.io/alvine28/jmcsampleapp:latest
+        image: alvinejmc.azurecr.io/alvine28/jmcsampleapp-compose:latest
         ports:
         - containerPort: 1338
