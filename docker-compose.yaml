@@ -1,16 +1,8 @@
 version: '3'
-services:
-  azure-vote-back:
-    image: redis
-    container_name: azure-vote-back
+services:"
+  jmcsample-app:
+    build: .
+    image: alvinejmc.azurecr.io/alvine28/jmcsampleapp-compose:latest
+    container_name: jmcsample-app
     ports:
-        - "6379:6379"
-
-  azure-vote-front:
-    build: ./azure-vote
-    image: azure-vote-front
-    container_name: azure-vote-front
-    environment:
-      REDIS: azure-vote-back
-    ports:
-        - "8080:80"
+        - "1338:1338"
