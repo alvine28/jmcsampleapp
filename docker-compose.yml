@@ -20,7 +20,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jmcsample-app-front
+  name: jmcsample-app
 spec:
   ports:
   - port: 80
