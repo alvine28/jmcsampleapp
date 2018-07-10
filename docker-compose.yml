@@ -16,12 +16,13 @@ spec:
         - containerPort: 1338
       imagePullSecrets:
       - name: acr-auth
-
+    
 apiVersion: v1
 kind: Service
 metadata:
   name: jmcsample-app
 spec:
+  type: LoadBalancer
   ports:
   - port: 80
   selector:
