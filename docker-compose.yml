@@ -14,3 +14,5 @@ spec:
         image: alvinejmc.azurecr.io/alvine28/jmcsampleapp-compose:latest
         ports:
         - containerPort: 1338
+      imagePullSecrets:
+      - name: acr-auth
