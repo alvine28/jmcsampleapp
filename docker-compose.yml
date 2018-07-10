@@ -1,0 +1,15 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: jmcsample-app
+spec:
+  template:
+    metadata:
+      labels:
+        app: jmcsample-app
+    spec:
+      containers:
+      - name: jmcsample-app
+        image: alvinejmc.azurecr.io/alvine28/jmcsampleapp:latest
+        ports:
+        - containerPort: 1338
